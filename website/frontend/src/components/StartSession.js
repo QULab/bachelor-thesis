@@ -163,7 +163,7 @@ class StartSession extends React.Component {
               <div>
                 Please copy and paste the code to a safe place,{' '}
                 <strong>
-                  you won't be able to see it again after leaving this page.
+                  you wil not be able to see it again after leaving this page.
                 </strong>
               </div>
               {this.state.seed ? null : (
@@ -185,15 +185,7 @@ class StartSession extends React.Component {
                       }
                     >
                       <div>
-                        In order to receive your compensation ({COMPENSATION}{' '}
-                        per {SESSIONS_PER_COMPENSATION} completed surveys),
-                        please send a mail to{' '}
-                        <a href={`mailto:${CONTACT_MAIL}`} target="blank">
-                          {CONTACT_MAIL}
-                        </a>
-                        , including your participant ID (can be found in the
-                        upper right corner) and the confirmation codes of all
-                        the surverys you completed.
+                        In order to receive your compensation, please fill in the confirmation code on the Microworker's campaign.
                       </div>
                     </Popup>
                   ) : null}
@@ -204,7 +196,7 @@ class StartSession extends React.Component {
           <p>
             {allowAnotherSession ? (
               <Fragment>
-                You can now close this window or start another survey below.
+                You can now close this window.
               </Fragment>
             ) : (
               'You can now close this window.'
@@ -225,11 +217,14 @@ class StartSession extends React.Component {
     const previouslyFeedback = previousSession === 'Feedback'
     const previouslyRating =
       previousSession && !previouslyTraining && !previouslyFeedback
-    const allowAnotherSession = !this.state.seed
+    const allowAnotherSession = !this.state.previousSession
 
     return (
       <div className="tu-border tu-glow center-box centered-content">
+        {allowAnotherSession ? (
         <h2>Start {previouslyRating ? 'another' : 'a'} survey</h2>
+        ): (<h2>Survey completed</h2>)
+        }
         {this.renderThankYou()}
         {allowAnotherSession ? (
           <Fragment>
@@ -247,6 +242,7 @@ class StartSession extends React.Component {
                 </Link>
               ) : null}
               {this.state.completedTrainingSession ? (
+
                 <Link
                   className="btn"
                   to="/session"
@@ -306,8 +302,7 @@ class StartSession extends React.Component {
                       this.setState({ showTrainingExplanation: false })
                     }
                   >
-                    A test survey is just like a real survey, except your
-                    answers won't be recorded and you will get a pre-defined set
+                    The answers of the test survey will not be recorded and you will get a pre-defined set
                     of one very simple, one average, and one very difficult
                     text. This can help you familiarize yourself with the
                     process of the study and give you a feeling of the different
@@ -329,9 +324,9 @@ class StartSession extends React.Component {
                       onClose={() => this.setState({ showBreakPopup: false })}
                     >
                       <div>
-                        You've done a lot of work already, thank you! Please
+                        You have done a lot of work already, thank you! Please
                         take a little break before you continue, so that you can
-                        stay focused and concentrated on the texts.
+                        stay focused and concentrated.
                       </div>
                       <div className="break-timer">
                         {timerControl.getTime() > 60 * 1000 ? (
