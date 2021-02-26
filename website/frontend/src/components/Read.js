@@ -101,7 +101,7 @@ class Read extends React.Component {
         <div className="enclosing-paragraph">
           If you need more context, here is the paragraph the sentence was taken
           from: <br />
-          (You don't have to read this, but it can help you understand the
+          (You do not have to read this, but it can help you understand the
           sentence above.)
           <div className="item-text">
             {splitText[0]}
@@ -121,7 +121,7 @@ class Read extends React.Component {
       <Fragment>
         <div>
           Please read this {item.type} carefully and make sure you understand it
-          as well as you can. You can not come back to read it again once you
+          as well as you can. You cannot come back to read it again once you
           click on "Next Step".
         </div>
         {isSentence ? this.renderSentence(item) : this.renderParagraph(item)}
