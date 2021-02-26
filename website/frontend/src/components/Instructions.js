@@ -49,46 +49,33 @@ const Instructions = props => {
         </div>
         <p>
           Please read this page carefully and make sure you understand what
-          you're supposed to do.
+          you are supposed to do.
         </p>
         <p>
-          This study is part of my Bachelor's thesis, in which I'm composing a
-          data set of German texts and a{' '}
-          <strong>rating of their complexity and understandability. </strong>
-          This data set can then be used as a basis for identifying the most
-          complex parts of texts and automatically "translate" them to simpler
-          language.
+          This study is part of a project in which we want to assess the
+		  complexity and understandability of German text paragraphs.
         </p>
         <p>
-          In this study, you will read texts and answer questions about their
-          complexity and understandability. You can complete as many surveys as
-          you like. Each survey will take about {SESSION_DURATION} minutes to
-          complete and consists of multiple texts, for each of which you will be
+          You will read texts and answer questions about the
+          complexity and understandability. Each survey will take about {SESSION_DURATION} minutes to
+          complete and consists of two paragraphs, for each of which you will be
           led through the following three steps:
         </p>
         <h5>1. Reading</h5>
         <p>
           In the first step you can <strong>read the text</strong> that you will
-          be rating. This page will look slightly different depending on whether
-          the text is an entire paragraph or a single sentence.
+          be rating.
         </p>
         <p>
-          For sentences you will see the sentence at the top of the page in a
-          grey box. Please read it carefully to make sure you understand it as
-          well as possible. Below the sentence you will find the paragraph that
-          the sentence was taken from. You don't <em>have</em> to read it, but
-          it can help you understand the sentence.
-        </p>
-        <p>
-          For paragraphs we will measure how long it takes to read them, so the
+          We will measure how long it takes to read a paragraph, so the
           text will be hidden unless you hold a button below the text. Please
           make sure you read the entire paragraph and understand it as well as
           you can.
         </p>
         <p>
-          Once you're done, click on "Next Step".{' '}
+          Once you are done, click on "Next Step".{' '}
           <strong>
-            After that, you won't be able to go back to read the text.
+            After that, you will not be able to go back to read the text.
           </strong>
         </p>
         <h5>2. Questions</h5>
@@ -106,24 +93,14 @@ const Instructions = props => {
         <h5>Finish</h5>
         <p>
           After you complete the rating for one text, you will get the next
-          sentence or paragraph and can start the rating of that text. After
-          completing all texts of a survey, your answers will be saved and you
-          will be redirected to the homepage. You can then start another survey
-          if you want to.{' '}
-          <strong>You can complete as many surveys as you like.</strong>
+		  paragraph and can start the rating of that text. After
+          completing both texts of a survey, your answers will be saved and you
+          will be redirected to the homepage.
         </p>
         <h5>Compensation</h5>
         <p>
-          You will receive a compensation of {COMPENSATION} per{' '}
-          {SESSIONS_PER_COMPENSATION} completed surveys. In order to receive the
-          compensation, please send a mail to{' '}
-          <a href={`mailto:${CONTACT_MAIL}`} target="blank">
-            {CONTACT_MAIL}
-          </a>{' '}
-          after completing at least 10 surveys, including your participant ID
-          (can be found in the upper right corner after signing up) and the
-          confirmation codes of all the surveys you completed (will be shown at
-          the end of each survey).
+          After completing a session you will get a code. Please fill in this code in 
+		  the Microworker's campaign to prove a successfully completed job.
         </p>
         <p>
           <strong>Remember:</strong> There are{' '}
@@ -143,7 +120,7 @@ const Instructions = props => {
           <Fragment>
             <p>
               If this is your first time participating in this study and you
-              don't have an ID yet, please click here:
+              do not have an ID yet, please click here:
             </p>
             <Link className="btn" to="/demographics">
               New Participant
