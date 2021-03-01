@@ -222,8 +222,6 @@ class StartSession extends React.Component {
     return (
       <div className="tu-border tu-glow center-box centered-content">
         <h2>Start {previouslyRating ? 'another' : 'a'} survey</h2>
-        ): (<h2>Survey completed</h2>)
-        }
         {this.renderThankYou()}
         {allowAnotherSession ? (
           <Fragment>
