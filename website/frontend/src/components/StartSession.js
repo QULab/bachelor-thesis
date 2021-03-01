@@ -217,11 +217,10 @@ class StartSession extends React.Component {
     const previouslyFeedback = previousSession === 'Feedback'
     const previouslyRating =
       previousSession && !previouslyTraining && !previouslyFeedback
-    const allowAnotherSession = !this.state.previousSession
+    const allowAnotherSession = !this.state.seed
 
     return (
       <div className="tu-border tu-glow center-box centered-content">
-        {allowAnotherSession ? (
         <h2>Start {previouslyRating ? 'another' : 'a'} survey</h2>
         ): (<h2>Survey completed</h2>)
         }
