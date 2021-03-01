@@ -102,6 +102,7 @@ class Demographics extends React.Component {
                   name="gender"
                   id={`gender-${key}`}
                   value={key}
+				  required
                   checked={this.state.data.gender === key}
                   onChange={() =>
                     this.setState({ data: { ...this.state.data, gender: key } })
@@ -117,6 +118,7 @@ class Demographics extends React.Component {
                       name="gender-text"
                       id="gender-text"
                       value={this.state.data.genderText}
+					  required
                       onChange={e =>
                         this.setState({
                           data: {
@@ -153,7 +155,7 @@ class Demographics extends React.Component {
 
           <Link
             className="btn"
-            to="/listening-exercise"
+            to="/start-session"
             onClick={() => {
               demographicStore.set(this.state.data)
             }}
